@@ -11,10 +11,10 @@ class GCM {
     /**
      * Sending Push Notification
      */
-    public function send_notification($registatoin_ids, $message) {
+    public function send_notification($registration_ids, $message) {
         // include config
         include_once './config.php';
-
+/*
         // Get regId from database
         $sql = "SELECT regId FROM user_store";
         $results = mysqli_query($mysqli, $sql);
@@ -22,13 +22,13 @@ class GCM {
         while ($row = mysqli_fetch_row($results)) {
         $hasil[$i] = $row[0];
         $i++;
-        };
+        }; */
 
         // Set POST variables
         $url = 'https://android.googleapis.com/gcm/send';
 
         $fields = array(
-            'registration_ids' => $hasil,
+            'registration_ids' => $registration_ids,
             'data' => $message
         );
 
