@@ -1,6 +1,7 @@
 <?php
 // if (isset($_GET["regId"]) && isset($_GET["message"])) {
-    $regId = $_POST["regId"];
+    // $regId = $_POST["regid"];
+	$regId = "";
     $message = $_POST["message"];
 
     include_once './GCM.php';
